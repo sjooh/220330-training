@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0; padding:0;}
+
+    #root{
+      width:100vw; height:100vh;
+      /* background-color:antiquewhite; */
+      display:flex; justify-content:center;
+      align-items:center;
+    }
+
+    #root>div{
+      width:80vw; height:80vh;
+      /* border:1px solid black; */
+
+      display:flex; justify-content:space-between;
+      align-items:center;
+    }
+
+    #root>div>div{
+      width:20vw; height:30vh;
+      background-color:skyblue; color:white;
+
+      display:flex; justify-content: center;
+      align-items: center;
+
+      font-size:50px;
+    }
+
+    @media (max-width:1000px){
+      #root>div{
+        width:100vw; height:max-content;
+        display:flex; justify-content: center;
+        align-items:center; flex-direction:column;
+
+        transition:2s;
+      
+      }
+
+      #root>div>div{
+        width:10vw; height:10vh; margin:1vh;
+        font-size:20px;
+
+        transition:2s;
+       
+
+      }
+    }
+
+    #root>div>div:nth-child(2):hover{
+      background-color:plum;
+    }
+    /* root>div>div의 두번째만 색을 바꿔줄 수 있다 */
+
+    #root>div>div:nth-child(1):hover{
+      border-radius:50%; 
+      cursor: pointer;
+
+      transition:2s ;
+     
+    }
+    /* cursor 속성은 요소 위에 마우스 커서가 올라갔을 때 보여줄 모양을 지정 
+    커서를 올릴 시 모양을 원으로,
+    trasition 을 넣어 변화하는 속도를 바꿔주었다 */
+
+    
+    
+    
+
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div>
+      <div>item</div>
+      <div>item</div>
+      <div>item</div>
+    </div>
+  </div>
+  
+</body>
+</html>
